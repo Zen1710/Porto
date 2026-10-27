@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T23:00:00Z",
+  "title": "Design System: Naufal Rizky Ananda",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(99.4% 0.001 90)",
+        "dark": "oklch(16.5% 0.006 265)",
+        "tonalRamp": [
+          "oklch(15% 0.001 90)",
+          "oklch(27% 0.001 90)",
+          "oklch(39% 0.001 90)",
+          "oklch(51% 0.001 90)",
+          "oklch(63% 0.001 90)",
+          "oklch(75% 0.001 90)",
+          "oklch(87% 0.001 90)",
+          "oklch(99.4% 0.001 90)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Graphite Ink",
+        "canonical": "oklch(21% 0.006 265)",
+        "dark": "oklch(95% 0.003 265)",
+        "tonalRamp": [
+          "oklch(15% 0.005 265)",
+          "oklch(21% 0.006 265)",
+          "oklch(33% 0.006 265)",
+          "oklch(45% 0.006 265)",
+          "oklch(57% 0.005 265)",
+          "oklch(69% 0.004 265)",
+          "oklch(82% 0.003 265)",
+          "oklch(95% 0.002 265)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "oklch(44% 0.008 265)",
+        "dark": "oklch(73% 0.008 265)",
+        "tonalRamp": [
+          "oklch(15% 0.005 265)",
+          "oklch(27% 0.007 265)",
+          "oklch(44% 0.008 265)",
+          "oklch(55% 0.008 265)",
+          "oklch(66% 0.007 265)",
+          "oklch(76% 0.006 265)",
+          "oklch(86% 0.004 265)",
+          "oklch(95% 0.002 265)"
+        ]
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Slate Subtle",
+        "canonical": "oklch(51% 0.008 265)",
+        "dark": "oklch(64% 0.008 265)",
+        "tonalRamp": [
+          "oklch(15% 0.005 265)",
+          "oklch(27% 0.007 265)",
+          "oklch(39% 0.008 265)",
+          "oklch(51% 0.008 265)",
+          "oklch(63% 0.007 265)",
+          "oklch(75% 0.006 265)",
+          "oklch(86% 0.004 265)",
+          "oklch(95% 0.002 265)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(91.5% 0.003 265)",
+        "dark": "oklch(27% 0.006 265)",
+        "tonalRamp": [
+          "oklch(15% 0.003 265)",
+          "oklch(27% 0.003 265)",
+          "oklch(40% 0.003 265)",
+          "oklch(53% 0.003 265)",
+          "oklch(66% 0.003 265)",
+          "oklch(79% 0.003 265)",
+          "oklch(91.5% 0.003 265)",
+          "oklch(97% 0.002 265)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "oklch(96.6% 0.002 265)",
+        "dark": "oklch(21% 0.006 265)",
+        "tonalRamp": [
+          "oklch(15% 0.002 265)",
+          "oklch(27% 0.002 265)",
+          "oklch(40% 0.002 265)",
+          "oklch(53% 0.002 265)",
+          "oklch(66% 0.002 265)",
+          "oklch(79% 0.002 265)",
+          "oklch(90% 0.002 265)",
+          "oklch(96.6% 0.002 265)"
+        ]
+      },
+      "live": {
+        "role": "tertiary",
+        "displayName": "Availability Green",
+        "canonical": "oklch(64% 0.16 150)",
+        "dark": "oklch(72% 0.17 150)",
+        "tonalRamp": [
+          "oklch(15% 0.05 150)",
+          "oklch(27% 0.09 150)",
+          "oklch(40% 0.12 150)",
+          "oklch(52% 0.15 150)",
+          "oklch(64% 0.16 150)",
+          "oklch(75% 0.13 150)",
+          "oklch(86% 0.08 150)",
+          "oklch(95% 0.03 150)"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Error Red",
+        "canonical": "oklch(52% 0.18 27)",
+        "dark": "oklch(72% 0.15 27)",
+        "tonalRamp": [
+          "oklch(15% 0.05 27)",
+          "oklch(27% 0.10 27)",
+          "oklch(40% 0.15 27)",
+          "oklch(52% 0.18 27)",
+          "oklch(64% 0.16 27)",
+          "oklch(75% 0.12 27)",
+          "oklch(86% 0.07 27)",
+          "oklch(95% 0.02 27)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The home headline only. Scales 2.5rem, 3rem (sm), 3.25rem (lg); 2.5rem on short viewports. Max 13ch, balanced."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Detail-page h1. 2rem, 2.5rem from sm."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Stack sentence with inline chips (line-height 1.95) and detail-page summaries."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings, deliberately close to body size."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose and summaries in muted; 68ch prose measure, 60ch summaries."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, form labels, text links; 400 weight with tabular numerals for dates and meta."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Geist Mono inside prose code and pre blocks only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Scrollspy rule width (500ms) and prose link underline color (200ms)."
+      },
+      {
+        "name": "state-color",
+        "value": "200ms",
+        "purpose": "Color, border, opacity, and underline transitions on links, buttons, inputs, and icons."
+      },
+      {
+        "name": "scrollspy-rule",
+        "value": "500ms ease-out-expo",
+        "purpose": "Active nav rule extends from 32px to 64px; disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "short",
+        "value": "max-height: 820px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single ink-filled pill, used for submitting the contact form.",
+      "html": "<button class=\"ds-btn-primary\">Send message</button>",
+      "css": ".ds-btn-primary { background: var(--ink, oklch(21% 0.006 265)); color: var(--paper, oklch(99.4% 0.001 90)); border: 0; border-radius: 9999px; padding: 10px 20px; font: 500 0.875rem/1.43 Geist, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: opacity 200ms; } .ds-btn-primary:hover { opacity: 0.85; } .ds-btn-primary:focus-visible { outline: 2px solid var(--ink, oklch(21% 0.006 265)); outline-offset: 3px; } .ds-btn-primary:disabled { opacity: 0.6; cursor: progress; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The hairline pill with a download icon, used for the CV download.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Download CV</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line, oklch(91.5% 0.003 265)); border-radius: 9999px; padding: 8px 16px; color: var(--ink, oklch(21% 0.006 265)); font: 500 0.875rem/1.43 Geist, ui-sans-serif, system-ui, sans-serif; text-decoration: none; transition: border-color 200ms; } .ds-btn-outline svg { width: 16px; height: 16px; } .ds-btn-outline:hover { border-color: var(--ink, oklch(21% 0.006 265)); } .ds-btn-outline:focus-visible { outline: 2px solid var(--ink, oklch(21% 0.006 265)); outline-offset: 3px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Contact form field with label above; hairline stroke, ink on focus, danger on error.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-email\">Email</label><input class=\"ds-input\" id=\"ds-email\" type=\"email\"></div><div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-bad\">Name</label><input class=\"ds-input\" id=\"ds-bad\" aria-invalid=\"true\"><p class=\"ds-field-error\">Please enter your name.</p></div>",
+      "css": ".ds-field { margin-bottom: 20px; } .ds-field-label { font: 500 0.875rem/1.43 Geist, ui-sans-serif, system-ui, sans-serif; color: var(--ink, oklch(21% 0.006 265)); } .ds-input { display: block; width: 100%; margin-top: 8px; border: 1px solid var(--line, oklch(91.5% 0.003 265)); border-radius: 8px; background: var(--paper, oklch(99.4% 0.001 90)); color: var(--ink, oklch(21% 0.006 265)); padding: 10px 14px; font: 400 1rem/1.5 Geist, ui-sans-serif, system-ui, sans-serif; transition: border-color 200ms; } .ds-input:hover { border-color: var(--subtle, oklch(51% 0.008 265)); } .ds-input:focus { outline: none; border-color: var(--ink, oklch(21% 0.006 265)); box-shadow: 0 0 0 1px var(--ink, oklch(21% 0.006 265)); } .ds-input[aria-invalid=\"true\"] { border-color: var(--danger, oklch(52% 0.18 27)); } .ds-input[aria-invalid=\"true\"]:focus { border-color: var(--ink, oklch(21% 0.006 265)); } .ds-field-error { margin-top: 6px; font: 400 0.875rem/1.43 Geist, ui-sans-serif, system-ui, sans-serif; color: var(--danger, oklch(52% 0.18 27)); }"
+    },
+    {
+      "name": "Scrollspy Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Signature: a rule plus label per section; the active rule extends to 64px in ink and the label inks.",
+      "html": "<nav class=\"ds-spy\"><a class=\"ds-spy-item is-active\" href=\"#\"><span class=\"ds-spy-rule\"></span><span class=\"ds-spy-label\">About</span></a><a class=\"ds-spy-item\" href=\"#\"><span class=\"ds-spy-rule\"></span><span class=\"ds-spy-label\">Projects</span></a><a class=\"ds-spy-item\" href=\"#\"><span class=\"ds-spy-rule\"></span><span class=\"ds-spy-label\">Contact</span></a></nav>",
+      "css": ".ds-spy { display: flex; flex-direction: column; gap: 4px; } .ds-spy-item { display: flex; align-items: center; gap: 16px; padding: 8px 0; font: 500 0.875rem/1.43 Geist, ui-sans-serif, system-ui, sans-serif; text-decoration: none; } .ds-spy-rule { height: 1px; width: 32px; background: var(--subtle, oklch(51% 0.008 265)); transition: width 500ms cubic-bezier(0.16, 1, 0.3, 1), background-color 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-spy-label { color: var(--subtle, oklch(51% 0.008 265)); transition: color 300ms; } .ds-spy-item:hover .ds-spy-rule, .ds-spy-item.is-active .ds-spy-rule { width: 64px; background: var(--ink, oklch(21% 0.006 265)); } .ds-spy-item:hover .ds-spy-label, .ds-spy-item.is-active .ds-spy-label { color: var(--ink, oklch(21% 0.006 265)); } .ds-spy-item:focus-visible { outline: 2px solid var(--ink, oklch(21% 0.006 265)); outline-offset: 3px; border-radius: 4px; } @media (prefers-reduced-motion: reduce) { .ds-spy-rule { transition: none; } }"
+    },
+    {
+      "name": "Tech Chip",
+      "kind": "chip",
+      "refersTo": "tech-chip",
+      "description": "Inline technology chip with a monochrome logo, sitting on the sentence baseline.",
+      "html": "<p class=\"ds-chip-line\">I work mostly with <span class=\"ds-chip\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z\"/></svg>TypeScript</span> and Next.js.</p>",
+      "css": ".ds-chip-line { font: 400 1.0625rem/1.95 Geist, ui-sans-serif, system-ui, sans-serif; color: var(--muted, oklch(44% 0.008 265)); } .ds-chip { display: inline-block; white-space: nowrap; border: 1px solid var(--line, oklch(91.5% 0.003 265)); background: var(--wash, oklch(96.6% 0.002 265)); border-radius: 6px; padding: 0.05em 0.4em; font-size: 0.92em; line-height: 1.45; font-weight: 500; color: var(--ink, oklch(21% 0.006 265)); } .ds-chip svg { display: inline-block; width: 0.95em; height: 0.95em; margin-right: 0.35em; vertical-align: -0.13em; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Inline ink link with a hairline underline that darkens on hover; external links add an up-right arrow.",
+      "html": "<p class=\"ds-link-line\">You can also reach me <a class=\"ds-link\" href=\"#\">on LinkedIn<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>.</p>",
+      "css": ".ds-link-line { font: 400 1rem/1.625 Geist, ui-sans-serif, system-ui, sans-serif; color: var(--muted, oklch(44% 0.008 265)); } .ds-link { display: inline-flex; align-items: center; gap: 4px; font-weight: 500; color: var(--ink, oklch(21% 0.006 265)); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--line, oklch(91.5% 0.003 265)); text-underline-offset: 4px; transition: text-decoration-color 200ms; } .ds-link svg { width: 14px; height: 14px; } .ds-link:hover { text-decoration-color: currentColor; } .ds-link:focus-visible { outline: 2px solid var(--ink, oklch(21% 0.006 265)); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "List Row",
+      "kind": "card",
+      "refersTo": "project-row",
+      "description": "Hairline-divided clickable row for Projects and Build Logs; no card fill, no shadow.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-head\"><span class=\"ds-row-title\">Project title</span><span class=\"ds-row-date\">Oct 2026</span></span><span class=\"ds-row-summary\">One-sentence summary of what was built and why.</span></a></li><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-head\"><span class=\"ds-row-title\">Another project</span><span class=\"ds-row-date\">Sep 2026</span></span><span class=\"ds-row-summary\">Summary text in muted, darkening to ink on hover.</span></a></li></ul>",
+      "css": ".ds-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line, oklch(91.5% 0.003 265)); border-bottom: 1px solid var(--line, oklch(91.5% 0.003 265)); font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-rows li + li { border-top: 1px solid var(--line, oklch(91.5% 0.003 265)); } .ds-row { display: block; padding: 24px 0; text-decoration: none; } .ds-row-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; } .ds-row-title { font-weight: 600; color: var(--ink, oklch(21% 0.006 265)); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 200ms; } .ds-row-date { font-size: 0.875rem; color: var(--subtle, oklch(51% 0.008 265)); font-variant-numeric: tabular-nums; } .ds-row-summary { display: block; margin-top: 8px; max-width: 60ch; line-height: 1.625; color: var(--muted, oklch(44% 0.008 265)); transition: color 200ms; } .ds-row:hover .ds-row-title { text-decoration-color: currentColor; } .ds-row:hover .ds-row-summary { color: var(--ink, oklch(21% 0.006 265)); } .ds-row:focus-visible { outline: 2px solid var(--ink, oklch(21% 0.006 265)); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Avatar With Availability Dot",
+      "kind": "custom",
+      "refersTo": "avatar",
+      "description": "64px grayscale circle with a paper-ringed green dot; initials fallback on wash.",
+      "html": "<span class=\"ds-avatar\"><span class=\"ds-avatar-fallback\">NR</span><span class=\"ds-avatar-dot\"></span></span>",
+      "css": ".ds-avatar { position: relative; display: inline-block; width: 64px; height: 64px; } .ds-avatar-fallback { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid var(--line, oklch(91.5% 0.003 265)); background: var(--wash, oklch(96.6% 0.002 265)); font: 600 0.875rem/1 Geist, ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.025em; color: var(--ink, oklch(21% 0.006 265)); filter: grayscale(1); } .ds-avatar-dot { position: absolute; right: 0; bottom: 0; width: 14px; height: 14px; border-radius: 9999px; border: 2.5px solid var(--paper, oklch(99.4% 0.001 90)); background: var(--live, oklch(64% 0.16 150)); box-sizing: border-box; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Résumé That Stays Put",
+    "overview": "This is a typographic résumé page, not a showcase. On desktop, identity and contact live in a sticky left column: the avatar, name, and role, the headline, the stack sentence, availability with the social links under it, the section nav, and the CV button. The content scrolls past on the right. Everything is ink on near-white paper. Hierarchy comes from Geist's weight and size alone. Depth comes from hairline rules. Nothing glows, floats, or fades in.\n\nThe page has a reading density, like a well-set CV. It uses generous line height, measures held between 60 and 68 characters, and section titles barely larger than body text. The headline is the only loud element. Color is almost absent. A small green dot marks availability, and red appears only when a form field fails. Motion is limited to state transitions. The one signature move is the scrollspy: the active section's rule grows and its label darkens.\n\nThe world rejects the category default for portfolios: a centered hero above a grid of shadowed cards with gradient accents. It must not read as generic AI-generated UI.",
+    "keyCharacteristics": [
+      "Two columns on desktop with a sticky identity column. One column on mobile, in the same order, with no nav.",
+      "Monochrome OKLCH neutrals with a faint cool tint. Light by default; dark follows the OS.",
+      "Only Geist and Geist Mono. Sentence case everywhere. Hierarchy comes from weight and size.",
+      "Hairline rules and tonal wash instead of shadows.",
+      "Tech names are inline chips with monochrome brand logos, sitting on the text baseline."
+    ],
+    "rules": [
+      {
+        "name": "The Two Signals Rule",
+        "body": "Green means \"available\" and red means \"this field needs fixing\". Neither hue appears anywhere else, and no third hue is added.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Is The Accent Rule",
+        "body": "Emphasis comes from moving a neutral to ink, never from adding a color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "All text is sentence case at normal tracking. There are no tracked uppercase labels, no eyebrows, and no kickers above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Loud Line Rule",
+        "body": "Only the headline uses display size. Section titles stay quiet and do not compete with it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separate content with 1px `line` rules (list dividers, section footers, table rows, blockquote edges), never with shadows or filled cards.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every color from the eight tokens, and let dark mode remap them through `prefers-color-scheme`.",
+      "Do create hierarchy with Geist weight (400/500/600) and size, keeping section titles close to body size.",
+      "Do separate content with 1px `line` rules and `wash` fills.",
+      "Do make buttons full pills, either ink-filled or hairline-outlined, with label type.",
+      "Do show technologies as inline chips with monochrome logos on the text baseline.",
+      "Do keep motion to 200ms color, opacity, and underline transitions, plus the scrollspy rule, and respect reduced motion.",
+      "Do hide any section, nav item, link, or button that has no real Published content behind it."
+    ],
+    "donts": [
+      "Don't use box shadows, gradients, glass, or blur for depth.",
+      "Don't add a hue. Green is only for availability and red only for form errors.",
+      "Don't use tracked uppercase labels, eyebrows, or kickers. Everything is sentence case.",
+      "Don't wrap content in filled, shadowed cards, and don't build a centered hero above a card grid.",
+      "Don't add a second typeface or use Geist Mono outside code.",
+      "Don't add entrance animations or scroll-triggered reveals. The scrollspy is the only scroll-linked motion.",
+      "Don't show colored brand logos. Logos are always monochrome in `currentColor`."
+    ]
+  }
+}

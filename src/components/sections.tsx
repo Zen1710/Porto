@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { Change } from "@/lib/changelog";
 import type { BuildLog, Entry } from "@/lib/content";
 import { formatDate, formatMonth, formatRange } from "@/lib/format";
 import type { Experience, ProjectMeta } from "@/lib/schema";
@@ -101,6 +102,33 @@ export function BuildLogList({ logs }: { logs: BuildLog[] }) {
               {formatDate(log.date)}
             </span>
           </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function ChangelogList({ changes }: { changes: Change[] }) {
+  return (
+    <ul className="divide-y divide-line border-y border-line">
+      {changes.map((change) => (
+        <li key={change.sha}>
+          <a
+            href={change.url}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-baseline justify-between gap-6 py-4"
+          >
+            <span className="min-w-0">
+              <span className="font-medium break-words text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+                {change.message}
+              </span>
+              <span className="mt-1 block text-sm text-subtle">{change.source}</span>
+            </span>
+            <span className="shrink-0 text-sm text-subtle tabular-nums transition-colors duration-200 group-hover:text-muted">
+              {formatDate(change.date)}
+            </span>
+          </a>
         </li>
       ))}
     </ul>

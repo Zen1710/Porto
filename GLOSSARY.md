@@ -20,6 +20,10 @@ _Avoid_: Job, history, riwayat
 Catatan singkat bertanggal tentang satu langkah dalam proses membangun sebuah Project.
 _Avoid_: Blog post, article, devlog
 
+**Changelog**:
+Daftar perubahan yang diambil otomatis dari commit di repo GitHub situs ini dan repo setiap Project yang tampil, terbaru di atas.
+_Avoid_: Activity, history, release notes
+
 **Draft**:
 Project, Build Log, atau Experience yang sudah ditulis tapi belum tampil di situs live.
 _Avoid_: Unpublished, hidden, WIP

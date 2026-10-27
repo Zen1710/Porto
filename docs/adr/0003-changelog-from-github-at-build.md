@@ -1,0 +1,3 @@
+# Changelog diambil dari GitHub API saat build
+
+Changelog di situs dibuat dari commit di repo GitHub situs ini dan repo setiap Project yang tampil. Commit-nya diambil lewat GitHub REST API saat build, jadi tidak perlu ditulis tangan. Data ini sengaja tidak diperbarui dengan ISR, karena loader konten membaca file di `content/` lewat filesystem, dan file itu belum tentu ikut ter-bundle saat halaman di-regenerate di Vercel. Akibatnya Changelog baru diperbarui setiap kali situs di-deploy ulang. Repo yang tidak bisa dibaca (kosong, private, atau kena rate limit) dilewati, supaya build tidak pernah gagal gara-gara GitHub. `GITHUB_TOKEN` opsional dan hanya dipakai untuk menaikkan rate limit.

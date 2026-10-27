@@ -3,16 +3,19 @@ import { profile } from "@content/profile";
 import About from "@content/about.mdx";
 import { ContactForm } from "@/components/contact-form";
 import type { NavItem } from "@/components/scrollspy-nav";
-import { BuildLogList, ExperienceList, ProjectList, Section, TextLink } from "@/components/sections";
+import { BuildLogList, ChangelogList, ExperienceList, ProjectList, Section, TextLink } from "@/components/sections";
 import { Sidebar } from "@/components/sidebar";
+import { getChangelog } from "@/lib/changelog";
 import { getBuildLogs, getExperience, getProjects, hasAbout, publicFileExists } from "@/lib/content";
 
 const LATEST_LOGS = 5;
+const LATEST_CHANGES = 8;
 
-export default function Home() {
+export default async function Home() {
   const projects = getProjects();
   const experience = getExperience();
   const logs = getBuildLogs();
+  const changes = await getChangelog(LATEST_CHANGES);
   const showAbout = hasAbout();
   const { links } = profile;
 
@@ -22,6 +25,7 @@ export default function Home() {
     projects.length > 0 && { id: "projects", label: "Projects" },
     experience.length > 0 && { id: "experience", label: "Experience" },
     logs.length > 0 && { id: "build-logs", label: "Build Logs" },
+    changes.length > 0 && { id: "changelog", label: "Changelog" },
     { id: "contact", label: "Contact" },
   ].filter((item) => !!item);
 
@@ -62,6 +66,12 @@ export default function Home() {
                 </Link>
               </p>
             )}
+          </Section>
+        )}
+
+        {changes.length > 0 && (
+          <Section id="changelog" title="Changelog">
+            <ChangelogList changes={changes} />
           </Section>
         )}
 

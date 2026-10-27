@@ -4,7 +4,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 ## Status
 
-- **Tahap:** pengembangan lokal. Git sudah di-init (branch `main`, remote `origin` → github.com/Zen1710/Porto), tapi belum ada commit. Naufal yang akan add, commit, dan push sendiri. Belum di-deploy ke Vercel.
+- **Tahap:** pengembangan lokal. Repo: https://github.com/Zen1710/Porto. Branch `main` (stabil, sumber Changelog) dan `develop` (tempat kerja), keduanya sudah di-push. Belum di-deploy ke Vercel.
 - **Situs live (saat nanti di-deploy):** baru menampilkan Hero, About, dan Contact, karena belum ada Project, Experience, atau Build Log yang Published.
 - **Preview lokal:** `pnpm dev`, lalu buka http://localhost:3000. Konten Draft ikut tampil dengan label "Draft".
 
@@ -21,7 +21,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 ## Langkah berikutnya
 
 1. Lanjutkan pengembangan lokal sesuai kebutuhan Naufal.
-2. Naufal: commit pertama di `main`, push, lalu bikin branch `develop` (perintahnya ada di log 2026-10-27).
+2. Kerjakan perubahan di `develop`, lalu merge ke `main` kalau sudah siap tayang.
 3. Import repo ke Vercel Hobby, isi env Resend, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
 
 ## Log
@@ -30,6 +30,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 - Toggle light/dark: tombol bulan/matahari di kanan baris avatar (dan di halaman detail). Sebelum dipilih, tema mengikuti OS. Pilihan disimpan di `localStorage` dan diterapkan sebelum halaman tampil. Token warna sekarang memakai `light-dark()`.
 - Section Changelog: commit dari repo situs ini dan repo setiap Project yang tampil, diambil dari GitHub API saat build (`docs/adr/0003-changelog-from-github-at-build.md`). `GITHUB_TOKEN` opsional untuk menaikkan rate limit.
+- Commit pertama dan push: `feat: initial portfolio site`, `feat: add light/dark theme toggle`, `feat: add changelog built from GitHub commits`, `docs: record theme toggle and changelog` di `main`, lalu branch `develop` dibuat dari situ.
 - Catatan: kalau warna tidak berubah di `pnpm dev` setelah CSS diedit, matikan server dev, hapus `.next/dev`, lalu jalankan lagi. CSS dev sempat tertinggal versi lama.
 
 ### 2026-10-27: Project Smartphone Catalog, link sosial

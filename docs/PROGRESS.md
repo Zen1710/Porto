@@ -31,6 +31,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - Toggle light/dark: tombol bulan/matahari di kanan baris avatar (dan di halaman detail). Sebelum dipilih, tema mengikuti OS. Pilihan disimpan di `localStorage` dan diterapkan sebelum halaman tampil. Token warna sekarang memakai `light-dark()`.
 - Section Changelog: commit dari repo situs ini dan repo setiap Project yang tampil, diambil dari GitHub API saat build (`docs/adr/0003-changelog-from-github-at-build.md`). `GITHUB_TOKEN` opsional untuk menaikkan rate limit.
 - Commit pertama dan push: `feat: initial portfolio site`, `feat: add light/dark theme toggle`, `feat: add changelog built from GitHub commits`, `docs: record theme toggle and changelog` di `main`, lalu branch `develop` dibuat dari situ.
+- Email commit diganti ke noreply GitHub (`git config user.email` khusus repo ini). History `main` dan `develop` ditulis ulang dan di-force-push supaya email pribadi hilang dari semua commit.
 - Catatan: kalau warna tidak berubah di `pnpm dev` setelah CSS diedit, matikan server dev, hapus `.next/dev`, lalu jalankan lagi. CSS dev sempat tertinggal versi lama.
 
 ### 2026-10-27: Project Smartphone Catalog, link sosial

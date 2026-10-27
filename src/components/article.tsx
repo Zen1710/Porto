@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { profile } from "@content/profile";
 import { ArrowLeftIcon } from "./icons";
+import { ThemeToggle } from "./theme-toggle";
 
 /** Shell for Project and Build Log detail pages. */
 export function Article({ meta, title, summary, children, footer, plain = false }: {
@@ -15,15 +16,18 @@ export function Article({ meta, title, summary, children, footer, plain = false 
 }) {
   return (
     <div className="mx-auto min-h-dvh max-w-2xl px-6 pt-16 pb-24 sm:px-10 sm:pt-24">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-200 hover:text-ink"
-      >
-        <ArrowLeftIcon className="size-4" />
-        {profile.name}
-      </Link>
+      <div className="flex items-center justify-between gap-4">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-200 hover:text-ink"
+        >
+          <ArrowLeftIcon className="size-4" />
+          {profile.name}
+        </Link>
+        <ThemeToggle className="-mr-2" />
+      </div>
 
-      <article className="mt-14">
+      <article className="mt-12">
         <header>
           <h1 className="text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] text-balance text-ink sm:text-[2.5rem]">
             {title}

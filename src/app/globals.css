@@ -1,29 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --paper: oklch(99.4% 0.001 90);
-  --ink: oklch(21% 0.006 265);
-  --muted: oklch(44% 0.008 265);
-  --subtle: oklch(51% 0.008 265);
-  --line: oklch(91.5% 0.003 265);
-  --wash: oklch(96.6% 0.002 265);
-  --live: oklch(64% 0.16 150);
-  --danger: oklch(52% 0.18 27);
+  /* Each token is light-dark(light, dark). The OS picks until the visitor uses the theme toggle. */
+  --paper: light-dark(oklch(99.4% 0.001 90), oklch(16.5% 0.006 265));
+  --ink: light-dark(oklch(21% 0.006 265), oklch(95% 0.003 265));
+  --muted: light-dark(oklch(44% 0.008 265), oklch(73% 0.008 265));
+  --subtle: light-dark(oklch(51% 0.008 265), oklch(64% 0.008 265));
+  --line: light-dark(oklch(91.5% 0.003 265), oklch(27% 0.006 265));
+  --wash: light-dark(oklch(96.6% 0.002 265), oklch(21% 0.006 265));
+  --live: light-dark(oklch(64% 0.16 150), oklch(72% 0.17 150));
+  --danger: light-dark(oklch(52% 0.18 27), oklch(72% 0.15 27));
+  color-scheme: light dark;
+}
+
+:root[data-theme="light"] {
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: oklch(16.5% 0.006 265);
-    --ink: oklch(95% 0.003 265);
-    --muted: oklch(73% 0.008 265);
-    --subtle: oklch(64% 0.008 265);
-    --line: oklch(27% 0.006 265);
-    --wash: oklch(21% 0.006 265);
-    --live: oklch(72% 0.17 150);
-    --danger: oklch(72% 0.15 27);
-    color-scheme: dark;
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -91,6 +86,25 @@
 }
 
 @layer components {
+  /* The toggle shows the theme it switches to: a moon on light, a sun on dark. */
+  .theme-icon-sun {
+    display: none;
+  }
+  :root[data-theme="dark"] .theme-icon-sun {
+    display: block;
+  }
+  :root[data-theme="dark"] .theme-icon-moon {
+    display: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-icon-sun {
+      display: block;
+    }
+    :root:not([data-theme="light"]) .theme-icon-moon {
+      display: none;
+    }
+  }
+
   /* Long-form MDX body: Projects, Build Logs, About. */
   .prose-body {
     color: var(--muted);

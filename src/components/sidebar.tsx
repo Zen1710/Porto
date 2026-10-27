@@ -3,6 +3,7 @@ import { Avatar } from "./avatar";
 import { DownloadIcon } from "./icons";
 import { ScrollspyNav, type NavItem } from "./scrollspy-nav";
 import { SocialLinks } from "./social-links";
+import { ThemeToggle } from "./theme-toggle";
 import { ChipList } from "./tech-chip";
 
 export function Sidebar({ nav, hasCv, hasPhoto }: { nav: NavItem[]; hasCv: boolean; hasPhoto: boolean }) {
@@ -17,6 +18,7 @@ export function Sidebar({ nav, hasCv, hasPhoto }: { nav: NavItem[]; hasCv: boole
             <p className="font-semibold text-ink">{profile.name}</p>
             <p className="text-muted">{profile.role}</p>
           </div>
+          <ThemeToggle className="ml-auto" />
         </div>
 
         <h1 className="mt-10 max-w-[13ch] text-[2.5rem] leading-[1.04] font-semibold tracking-[-0.035em] text-balance text-ink sm:text-5xl lg:text-[3.25rem] lg:short:mt-6 lg:short:text-[2.5rem]">

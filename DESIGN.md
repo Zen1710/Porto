@@ -207,11 +207,13 @@ Two forms, both pills, both quiet.
 
 ### Navigation
 - **Scrollspy nav (signature):** a vertical list in the sticky column, desktop only. Each item is a horizontal rule followed by a label. At rest the rule is 32px of `subtle` and the label is `subtle`. When the item's section is active (its top has crossed 40% of the viewport) or the item is hovered, the rule extends to 64px in ink and the label turns ink. The width animates over 500ms with an expo ease-out, and the color over 300ms. This animation is skipped under reduced motion. Items are only listed for sections that have Published content.
+- **Theme toggle:** a 36px round icon button at the right end of the avatar row (and of the back-link row on detail pages). It shows a 18px stroke moon on light and a sun on dark, in `muted`. On hover it turns ink on a `wash` circle. Light/dark follows the OS until the visitor toggles, and the choice is saved in `localStorage` and applied before paint.
 - **Social links:** a row directly under the availability line. Each link is a 16px monochrome icon plus its label (GitHub, LinkedIn, Email) in `muted` at weight 500, 0.875rem. On hover the link turns ink and the label underlines. External links open in a new tab.
 - **Back link:** on detail pages, an arrow and the owner's name, in `muted` turning ink.
 
 ### Links
 - **Text link:** ink, weight 500, a 1px `line` underline offset 4px. On hover the underline darkens to `currentColor`. External links add a 14px up-right arrow and open in a new tab.
+- **Changelog rows:** the commit message in ink at weight 500, the source (“This site” or a Project title) below it in `subtle`, and the date right-aligned in `subtle` tabular numerals. Each row opens the commit on GitHub in a new tab.
 - **List-row links:** whole rows are clickable. The title's underline goes from transparent to `currentColor` on hover, and the summary darkens from `muted` to ink.
 
 ### Avatar

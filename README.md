@@ -27,6 +27,7 @@ Everything a visitor reads lives in [`content/`](content/). Adding an item means
 | Experience | `content/experience.ts` |
 | Photo | `public/photo.jpg` (replace the file) |
 | CV | `public/cv.pdf` (the Download CV button appears once it exists) |
+| Changelog | nothing to write: it lists commits from this repo and every visible Project's `repo` |
 
 Project frontmatter:
 
@@ -56,6 +57,10 @@ The form posts to a Server Action (`src/app/actions.ts`). It checks a honeypot f
 - `CONTACT_FROM_EMAIL`: optional; without a verified domain Resend only sends from `onboarding@resend.dev` to your own account email
 
 Add the same variables in Vercel under Project → Settings → Environment Variables.
+
+## Changelog
+
+The Changelog section is built from GitHub commits of this repo (`sourceRepo` in `content/profile.ts`) and of every visible Project that has a `repo`. Merge commits are skipped and only the first line of each message is shown. Production fetches once per build, so the list refreshes on every deploy. Local dev rechecks every minute. Set `GITHUB_TOKEN` to raise GitHub's API rate limit; without it the build still works and simply skips repos it cannot read.
 
 ## Deploy
 

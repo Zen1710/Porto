@@ -26,6 +26,12 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 ## Log
 
+### 2026-10-27: Toggle tema dan Changelog
+
+- Toggle light/dark: tombol bulan/matahari di kanan baris avatar (dan di halaman detail). Sebelum dipilih, tema mengikuti OS. Pilihan disimpan di `localStorage` dan diterapkan sebelum halaman tampil. Token warna sekarang memakai `light-dark()`.
+- Section Changelog: commit dari repo situs ini dan repo setiap Project yang tampil, diambil dari GitHub API saat build (`docs/adr/0003-changelog-from-github-at-build.md`). `GITHUB_TOKEN` opsional untuk menaikkan rate limit.
+- Catatan: kalau warna tidak berubah di `pnpm dev` setelah CSS diedit, matikan server dev, hapus `.next/dev`, lalu jalankan lagi. CSS dev sempat tertinggal versi lama.
+
 ### 2026-10-27: Project Smartphone Catalog, link sosial
 
 - Link GitHub (Zen1710) dan LinkedIn dipasang sebagai ikon + label tepat di bawah baris "Open to full-time and remote roles". Tombol CV tetap di bagian bawah kolom kiri.

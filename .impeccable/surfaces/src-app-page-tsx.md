@@ -11,7 +11,7 @@ Scope: `/` (all sections) plus the Project and Build Log detail pages that inher
 
 Audience and job: a Recruiter skimming for one or two minutes to decide whether to contact Naufal or download the CV. Proof is real content only; at launch nothing is Published, so About and Contact carry the page.
 
-Constraints: user-pinned world (wahyusyahputra.com style and format, brittanychiang.com two-column layout, antfu.me tech chips). Monochrome, Geist, light by default and dark via OS. Only motion is the scrollspy.
+Constraints: user-pinned world (wahyusyahputra.com style and format, brittanychiang.com two-column layout, antfu.me tech chips). Monochrome, Geist. Light/dark follows the OS until the visitor uses the theme toggle (added at Naufal's request, 2026-10-27). Only motion is the scrollspy.
 
 ## Direction contract
 

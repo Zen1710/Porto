@@ -23,7 +23,13 @@ export function repoSlug(url: string | undefined): string | null {
   return match ? `${match[1]}/${match[2]}` : null;
 }
 
-/** Keeps the first line of each commit and drops merge commits, which only repeat other changes. */
+/** Commits that only note AI tool runs ("claude code changes v1.0") say nothing about the work. */
+const HIDDEN_MESSAGE = /\bclaude\b/i;
+
+/**
+ * Keeps the first line of each commit and drops merge commits, which only repeat other changes,
+ * and commits that mention Claude.
+ */
 export function toChanges(commits: RawCommit[], source: string): Change[] {
   return commits
     .filter((c) => c.parents.length <= 1)
@@ -34,7 +40,7 @@ export function toChanges(commits: RawCommit[], source: string): Change[] {
       url: c.html_url,
       source,
     }))
-    .filter((c) => c.message !== "");
+    .filter((c) => c.message !== "" && !HIDDEN_MESSAGE.test(c.message));
 }
 
 async function fetchCommits(slug: string): Promise<RawCommit[]> {

@@ -5,6 +5,7 @@ import type { BuildLog, Entry } from "@/lib/content";
 import { formatDate, formatMonth, formatRange } from "@/lib/format";
 import type { Experience, ProjectMeta } from "@/lib/schema";
 import { ArrowUpRightIcon } from "./icons";
+import { ScrollList } from "./scroll-list";
 import { TechChip } from "./tech-chip";
 
 export function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
@@ -108,16 +109,17 @@ export function BuildLogList({ logs }: { logs: BuildLog[] }) {
   );
 }
 
-export function ChangelogList({ changes }: { changes: Change[] }) {
+export function ChangelogList({ changes, visible }: { changes: Change[]; visible: number }) {
   return (
-    <ul className="divide-y divide-line border-y border-line">
+    // Older changes scroll inside the list. The fallback height fits five one-line rows until it is measured.
+    <ScrollList rows={visible} className="max-h-[calc(25rem+6px)] divide-y divide-line border-y border-line">
       {changes.map((change) => (
         <li key={change.sha}>
           <a
             href={change.url}
             target="_blank"
             rel="noreferrer"
-            className="group flex items-baseline justify-between gap-6 py-4"
+            className="group flex items-baseline justify-between gap-6 py-4 focus-visible:-outline-offset-2"
           >
             <span className="min-w-0">
               <span className="font-medium break-words text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
@@ -131,7 +133,7 @@ export function ChangelogList({ changes }: { changes: Change[] }) {
           </a>
         </li>
       ))}
-    </ul>
+    </ScrollList>
   );
 }
 

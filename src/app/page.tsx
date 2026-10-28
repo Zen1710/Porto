@@ -9,7 +9,9 @@ import { getChangelog } from "@/lib/changelog";
 import { getBuildLogs, getExperience, getProjects, hasAbout, publicFileExists } from "@/lib/content";
 
 const LATEST_LOGS = 5;
-const LATEST_CHANGES = 8;
+const LATEST_CHANGES = 20;
+/** Changes visible before the list scrolls. */
+const VISIBLE_CHANGES = 5;
 
 export default async function Home() {
   const projects = getProjects();
@@ -71,7 +73,10 @@ export default async function Home() {
 
         {changes.length > 0 && (
           <Section id="changelog" title="Changelog">
-            <ChangelogList changes={changes} />
+            <ChangelogList changes={changes} visible={VISIBLE_CHANGES} />
+            {changes.length > VISIBLE_CHANGES && (
+              <p className="mt-5 text-sm text-subtle">Scroll the list for older changes.</p>
+            )}
           </Section>
         )}
 

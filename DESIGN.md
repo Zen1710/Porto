@@ -213,7 +213,7 @@ Two forms, both pills, both quiet.
 
 ### Links
 - **Text link:** ink, weight 500, a 1px `line` underline offset 4px. On hover the underline darkens to `currentColor`. External links add a 14px up-right arrow and open in a new tab.
-- **Changelog rows:** the commit message in ink at weight 500, the source (“This site” or a Project title) below it in `subtle`, and the date right-aligned in `subtle` tabular numerals. Each row opens the commit on GitHub in a new tab.
+- **Changelog rows:** the commit message in ink at weight 500, the source (“This site” or a Project title) below it in `subtle`, and the date right-aligned in `subtle` tabular numerals. Each row opens the commit on GitHub in a new tab. The list is measured to show the five latest rows whole, and older rows (up to 20) scroll inside its hairline frame. When there is more to scroll, a `subtle` 0.875rem line under the list says so. Inside the list the focus outline is drawn inset so the frame does not clip it. Commits that mention Claude are left out.
 - **List-row links:** whole rows are clickable. The title's underline goes from transparent to `currentColor` on hover, and the summary darkens from `muted` to ink.
 
 ### Avatar

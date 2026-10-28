@@ -40,4 +40,16 @@ describe("toChanges", () => {
       },
     ]);
   });
+
+  it("hides commits that mention Claude", () => {
+    const changes = toChanges(
+      [
+        commit("c1", "claude code change v 1.3", "2026-10-26T10:00:00Z"),
+        commit("c2", "Claude changes v1.2", "2026-10-26T09:00:00Z"),
+        commit("c3", "index version 2", "2026-10-26T08:00:00Z"),
+      ],
+      "Phone Catalogue",
+    );
+    expect(changes.map((c) => c.sha)).toEqual(["c3"]);
+  });
 });

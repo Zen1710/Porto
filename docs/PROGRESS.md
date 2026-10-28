@@ -26,6 +26,13 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 ## Log
 
+### 2026-10-28: Tema hitam-biru Arknights
+
+- Palette diganti jadi hitam-biru Arknights, mengikuti GitHub profile (hitam `#121416`, biru tua `#0A78B4`, biru terang `#1FB5E9`). Layout, tipografi, dan hairline tidak berubah.
+- Situs sekarang selalu terbuka gelap, apa pun setelan OS pengunjung. Mode terang tetap bisa dipilih lewat toggle.
+- Biru hanya dipakai untuk hal yang bisa diklik atau sedang aktif: link, garis nav aktif, fokus, tombol Send message, logo di chip tech dan link sosial. Favicon ikut hitam-biru.
+- `DESIGN.md`, `PRODUCT.md`, dan surface brief impeccable sudah diperbarui. `.impeccable/design.json` masih berisi palette lama.
+
 ### 2026-10-28: Pindah folder, Changelog lebih ringkas
 
 - Folder project dipindah ke `~/Developer/projects/portofolio`, dan data sesi Claude ikut dipindah. Dependencies, typecheck, lint, dan tes sudah dicek ulang, semuanya aman.

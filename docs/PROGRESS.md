@@ -26,6 +26,11 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 ## Log
 
+### 2026-10-28: Pindah folder, Changelog lebih ringkas
+
+- Folder project dipindah ke `~/Developer/projects/portofolio`, dan data sesi Claude ikut dipindah. Dependencies, typecheck, lint, dan tes sudah dicek ulang, semuanya aman.
+- Changelog: commit yang menyebut "claude" (catatan run AI di repo Smartphone Catalog) disembunyikan. List menampilkan 5 perubahan terbaru dengan tinggi yang pas, dan sisanya (sampai 20) di-scroll di dalam list. Di bawahnya ada keterangan "Scroll the list for older changes." yang hanya muncul kalau ada lebih dari 5.
+
 ### 2026-10-27: Toggle tema dan Changelog
 
 - Toggle light/dark: tombol bulan/matahari di kanan baris avatar (dan di halaman detail). Sebelum dipilih, tema mengikuti OS. Pilihan disimpan di `localStorage` dan diterapkan sebelum halaman tampil. Token warna sekarang memakai `light-dark()`.

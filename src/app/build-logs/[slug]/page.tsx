@@ -73,7 +73,7 @@ function LogLink({
       <span className="text-subtle">
         {label} · #{padNumber(log.number)}
       </span>
-      <span className="mt-1 block font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+      <span className="mt-1 block font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
         {log.title}
       </span>
     </Link>

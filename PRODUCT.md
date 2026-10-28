@@ -33,7 +33,7 @@ Naufal builds full-stack web apps end to end, from database to UI. Primary stack
 - Sections: Hero, About, Projects (each with a simple detail page), Experience (timeline), Build Logs (each with a detail page), Changelog, Contact.
 - Changelog: commits pulled at build time from this site's GitHub repo and every visible Project's repo (see `docs/adr/0003-changelog-from-github-at-build.md`).
 - Contact: a form (name, email, message) plus visible email and LinkedIn. Anti-spam is a honeypot, a time trap, and server-side schema validation; no external rate-limit service yet.
-- English only. Light/dark follows the OS until the visitor picks one with the theme toggle; the choice is remembered in the browser.
+- English only. The site opens dark (Arknights black and blue, matching the GitHub profile); the theme toggle switches to light and the choice is remembered in the browser.
 - Social links: GitHub, LinkedIn, Email only.
 - Terminology is defined in `GLOSSARY.md` (Recruiter, Project, Experience, Build Log, Draft, Published).
 

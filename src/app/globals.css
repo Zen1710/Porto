@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
+/*
+ * Arknights black and blue, matching the GitHub profile: black #121416, deep blue #0A78B4, bright blue #1FB5E9.
+ * Each token is light-dark(light, dark). Dark is the default; light only when the visitor picks it with the toggle.
+ */
 :root {
-  /* Each token is light-dark(light, dark). The OS picks until the visitor uses the theme toggle. */
-  --paper: light-dark(oklch(99.4% 0.001 90), oklch(16.5% 0.006 265));
-  --ink: light-dark(oklch(21% 0.006 265), oklch(95% 0.003 265));
-  --muted: light-dark(oklch(44% 0.008 265), oklch(73% 0.008 265));
-  --subtle: light-dark(oklch(51% 0.008 265), oklch(64% 0.008 265));
-  --line: light-dark(oklch(91.5% 0.003 265), oklch(27% 0.006 265));
-  --wash: light-dark(oklch(96.6% 0.002 265), oklch(21% 0.006 265));
+  --paper: light-dark(oklch(99.2% 0.003 240), oklch(19% 0.005 248));
+  --ink: light-dark(oklch(19% 0.005 248), oklch(95% 0.007 230));
+  --muted: light-dark(oklch(42% 0.022 245), oklch(76% 0.016 240));
+  --subtle: light-dark(oklch(50% 0.022 245), oklch(66% 0.02 240));
+  --line: light-dark(oklch(91% 0.009 240), oklch(29.5% 0.014 248));
+  --wash: light-dark(oklch(96.4% 0.006 240), oklch(22.4% 0.01 250));
+  /* Blue marks what can be used or is current: links, the active nav rule, focus, chip logos. */
+  --accent: light-dark(oklch(54.9% 0.127 242), oklch(72.4% 0.136 229));
+  /* Fill for the primary button, with on-accent text (4.8:1) in both themes. */
+  --accent-fill: oklch(54.9% 0.127 242);
+  --on-accent: oklch(99.2% 0.003 240);
   --live: light-dark(oklch(64% 0.16 150), oklch(72% 0.17 150));
   --danger: light-dark(oklch(52% 0.18 27), oklch(72% 0.15 27));
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
 }
 
 @theme inline {
@@ -28,6 +32,9 @@
   --color-subtle: var(--subtle);
   --color-line: var(--line);
   --color-wash: var(--wash);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-on-accent: var(--on-accent);
   --color-live: var(--live);
   --color-danger: var(--danger);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -64,12 +71,12 @@
   }
 
   ::selection {
-    background: var(--ink);
+    background: var(--accent);
     color: var(--paper);
   }
 
   :focus-visible {
-    outline: 2px solid var(--ink);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -86,23 +93,15 @@
 }
 
 @layer components {
-  /* The toggle shows the theme it switches to: a moon on light, a sun on dark. */
-  .theme-icon-sun {
+  /* The toggle shows the theme it switches to: a sun on dark (the default), a moon on light. */
+  .theme-icon-moon {
     display: none;
   }
-  :root[data-theme="dark"] .theme-icon-sun {
+  :root[data-theme="light"] .theme-icon-moon {
     display: block;
   }
-  :root[data-theme="dark"] .theme-icon-moon {
+  :root[data-theme="light"] .theme-icon-sun {
     display: none;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .theme-icon-sun {
-      display: block;
-    }
-    :root:not([data-theme="light"]) .theme-icon-moon {
-      display: none;
-    }
   }
 
   /* Long-form MDX body: Projects, Build Logs, About. */
@@ -137,13 +136,13 @@
       font-weight: 600;
     }
     & a {
-      color: var(--ink);
+      color: var(--accent);
       text-decoration-line: underline;
       text-decoration-color: var(--line);
       transition: text-decoration-color 200ms var(--ease-out-expo);
     }
     & a:hover {
-      text-decoration-color: currentColor;
+      text-decoration-color: var(--accent);
     }
     & ul,
     & ol {

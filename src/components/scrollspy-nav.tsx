@@ -46,8 +46,8 @@ export function ScrollspyNav({ items }: { items: NavItem[] }) {
                 className="group flex items-center gap-4 py-2 text-sm font-medium short:py-1"
               >
                 <span
-                  className={`h-px transition-[width,background-color] duration-500 ease-out-expo group-hover:w-16 group-hover:bg-ink motion-reduce:transition-none ${
-                    isActive ? "w-16 bg-ink" : "w-8 bg-subtle"
+                  className={`h-px transition-[width,background-color] duration-500 ease-out-expo group-hover:w-16 group-hover:bg-accent motion-reduce:transition-none ${
+                    isActive ? "w-16 bg-accent" : "w-8 bg-subtle"
                   }`}
                 />
                 <span

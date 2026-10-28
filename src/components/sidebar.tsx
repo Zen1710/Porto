@@ -35,7 +35,7 @@ export function Sidebar({ nav, hasCv, hasPhoto }: { nav: NavItem[]; hasCv: boole
           {profile.availability}{" "}
           <a
             href="#contact"
-            className="whitespace-nowrap text-muted underline decoration-line underline-offset-4 transition-colors duration-200 hover:text-ink hover:decoration-current"
+            className="whitespace-nowrap text-accent underline decoration-line underline-offset-4 transition-colors duration-200 hover:decoration-accent"
           >
             Get in touch
           </a>
@@ -53,7 +53,7 @@ export function Sidebar({ nav, hasCv, hasPhoto }: { nav: NavItem[]; hasCv: boole
           <a
             href="/cv.pdf"
             download={`${profile.name.replaceAll(" ", "-")}-CV.pdf`}
-            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:border-accent"
           >
             <DownloadIcon className="size-4" />
             Download CV

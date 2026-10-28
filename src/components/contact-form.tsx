@@ -7,7 +7,7 @@ import type { ContactField, ContactState } from "@/lib/contact";
 const initialState: ContactState = { status: "idle" };
 
 const inputClass =
-  "mt-2 block w-full rounded-lg border border-line bg-paper px-3.5 py-2.5 text-ink placeholder:text-subtle transition-colors duration-200 hover:border-subtle focus:border-ink focus:ring-1 focus:ring-ink focus:outline-none aria-invalid:border-danger aria-invalid:focus:border-ink";
+  "mt-2 block w-full rounded-lg border border-line bg-paper px-3.5 py-2.5 text-ink placeholder:text-subtle transition-colors duration-200 hover:border-subtle focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none aria-invalid:border-danger aria-invalid:focus:border-accent";
 
 export function ContactForm() {
   const [state, formAction, pending] = useActionState(sendMessage, initialState);
@@ -68,7 +68,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-opacity duration-200 hover:opacity-85 disabled:cursor-progress disabled:opacity-60"
+          className="rounded-full bg-accent-fill px-5 py-2.5 text-sm font-medium text-on-accent transition-opacity duration-200 hover:opacity-85 disabled:cursor-progress disabled:opacity-60"
         >
           {pending ? "Sending…" : "Send message"}
         </button>

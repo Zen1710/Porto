@@ -19,8 +19,8 @@ export function SocialLinks({ links, className = "" }: { links: Profile["links"]
             {...(href.startsWith("http") && { target: "_blank", rel: "noreferrer" })}
             className="group inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-200 hover:text-ink"
           >
-            <Icon className="size-4 shrink-0" />
-            <span className="underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+            <Icon className="size-4 shrink-0 text-accent" />
+            <span className="underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
               {label}
             </span>
           </a>

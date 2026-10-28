@@ -63,7 +63,7 @@ export default async function Home() {
             <BuildLogList logs={logs.slice(0, LATEST_LOGS)} />
             {logs.length > LATEST_LOGS && (
               <p className="mt-5 text-sm">
-                <Link href="/build-logs" className="font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-current">
+                <Link href="/build-logs" className="font-medium text-accent underline decoration-line underline-offset-4 hover:decoration-accent">
                   All {logs.length} build logs
                 </Link>
               </p>

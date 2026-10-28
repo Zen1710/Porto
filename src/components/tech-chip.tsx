@@ -10,7 +10,7 @@ export function TechChip({ name }: { name: string }) {
         <BrandIcon
           icon={tech.icon}
           viewBox={tech.viewBox}
-          className={`mr-[0.35em] inline-block ${tech.viewBox ? "h-[0.62em] w-auto align-[0.02em]" : "size-[0.95em] align-[-0.13em]"}`}
+          className={`mr-[0.35em] inline-block text-accent ${tech.viewBox ? "h-[0.62em] w-auto align-[0.02em]" : "size-[0.95em] align-[-0.13em]"}`}
         />
       )}
       {tech.label}

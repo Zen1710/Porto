@@ -36,7 +36,7 @@ export function ProjectList({ projects }: { projects: Entry<ProjectMeta>[] }) {
           <Link href={`/projects/${project.slug}`} className="group block py-6">
             <div className="flex items-baseline justify-between gap-6">
               <h3 className="font-semibold text-ink">
-                <span className="underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+                <span className="underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
                   {project.title}
                 </span>
                 <DraftBadge draft={project.draft} />
@@ -94,7 +94,7 @@ export function BuildLogList({ logs }: { logs: BuildLog[] }) {
         <li key={log.slug}>
           <Link href={`/build-logs/${log.slug}`} className="group flex items-baseline justify-between gap-6 py-5">
             <span>
-              <span className="font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+              <span className="font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
                 {log.title}
               </span>
               <DraftBadge draft={log.draft} />
@@ -122,7 +122,7 @@ export function ChangelogList({ changes, visible }: { changes: Change[]; visible
             className="group flex items-baseline justify-between gap-6 py-4 focus-visible:-outline-offset-2"
           >
             <span className="min-w-0">
-              <span className="font-medium break-words text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-current">
+              <span className="font-medium break-words text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
                 {change.message}
               </span>
               <span className="mt-1 block text-sm text-subtle">{change.source}</span>
@@ -143,7 +143,7 @@ export function TextLink({ href, children }: { href: string; children: ReactNode
     <a
       href={href}
       {...(external && { target: "_blank", rel: "noreferrer" })}
-      className="inline-flex items-center gap-1 font-medium text-ink underline decoration-line underline-offset-4 transition-colors duration-200 hover:decoration-current"
+      className="inline-flex items-center gap-1 font-medium text-accent underline decoration-line underline-offset-4 transition-colors duration-200 hover:decoration-accent"
     >
       {children}
       {external && <ArrowUpRightIcon className="size-3.5" />}

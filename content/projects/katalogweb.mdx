@@ -1,0 +1,25 @@
+---
+title: Property E-Catalog
+summary: A property catalog and admin panel for a real estate company, built with Laravel and MySQL during my web developer internship.
+date: 2024-08
+stack: [laravel, php, mysql, bootstrap]
+repo: https://github.com/Zen1710/KatalogWeb
+cover: /projects/katalogweb.png
+draft: true
+---
+
+## What it is
+
+An e-catalog for PT. Duta Idaman Property, built during my Web Developer internship (January to August 2024) as part of the company's Real Estate Management Information System. Clients browse houses, villas, apartments, and hotels for sale or rent, and staff manage listings, agents, partners, and visit requests from one admin panel.
+
+## Features
+
+- Search listings by name or address, and filter by price range, bedrooms, and bathrooms
+- Open a property to see its photos, floor plans, facilities, sale or rent status, and location on Google Maps
+- Request a site visit with a ticket, which staff schedule by assigning an agent and a date
+- Leave a review on each property
+- Manage properties, photo and floor plan galleries, agents, partners, FAQ, the About page, and admin accounts from the admin panel
+
+## How it is built
+
+Laravel 10 with Blade templates and Eloquent on MySQL. Search and filters run as database queries, and prices are stored as big integers so listings above Rp 2.1 billion fit. A demo seeder fills the catalog with realistic sample data: nine properties in Bengkulu with photos, floor plans, reviews, and visit requests.

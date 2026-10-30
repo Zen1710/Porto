@@ -17,6 +17,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - [ ] Lengkapi kalimat placeholder di `content/projects/portfolio-site.mdx` dan `content/build-logs/01-designing-before-coding.mdx`, lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Akun Resend dan env `RESEND_API_KEY` / `CONTACT_TO_EMAIL` (lihat `.env.example`)
 - [ ] Entri Experience di `content/experience.ts`
+- [ ] Review teks Project Property E-Catalog di `content/projects/katalogweb.mdx` (ditulis Claude dari CV dan isi repo KatalogWeb), lalu hapus `draft: true` kalau sudah siap tayang
 
 ## Langkah berikutnya
 
@@ -25,6 +26,14 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 3. Import repo ke Vercel Hobby, isi env Resend, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
 
 ## Log
+
+### 2026-10-30: Project Property E-Catalog
+
+- Project baru `content/projects/katalogweb.mdx` (Draft) untuk KatalogWeb (https://github.com/Zen1710/KatalogWeb), e-catalog properti dari magang di PT. Duta Idaman Property. Isinya diambil dari CV Naufal (`~/Developer/task/cv/cv.md`) dan isi repo. Cover `public/projects/katalogweb.png` adalah screenshot halaman detail properti dengan data demo.
+- Ikon tech baru di `src/lib/tech.ts`: `laravel`, `php`, `mysql`, `bootstrap`.
+- Kesepakatan: setiap `feat` baru di KatalogWeb ikut diperbarui di entri Project ini.
+- Catatan untuk saat Published: Changelog akan ikut menarik commit `main` KatalogWeb, termasuk 18 commit lama tim magang (author `Intern Team`) dengan pesan seperti "push db" dan "theme".
+- Typecheck, lint, dan tes lolos. Halaman project dicek di `pnpm dev`.
 
 ### 2026-10-28: Tema hitam-biru Arknights
 

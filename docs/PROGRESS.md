@@ -16,7 +16,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - [ ] Review teks About di `content/about.mdx` (ditulis Claude dari fakta yang Naufal berikan)
 - [ ] Lengkapi kalimat placeholder di `content/projects/portfolio-site.mdx` dan `content/build-logs/01-designing-before-coding.mdx`, lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Akun Resend dan env `RESEND_API_KEY` / `CONTACT_TO_EMAIL` (lihat `.env.example`)
-- [ ] Entri Experience di `content/experience.ts`
+- [ ] Entri Experience di `content/experience.ts`: magang PT. Duta Idaman Property sudah ditulis Claude dari CV (Draft), tinggal direview. Pengalaman lain di CV (IT Helpdesk PT. Telkom Akses, magang KJA Ahmad Syahfuddin, pendidikan) belum dimasukkan.
 - [ ] Review teks Project Property E-Catalog di `content/projects/katalogweb.mdx` (ditulis Claude dari CV dan isi repo KatalogWeb), lalu hapus `draft: true` kalau sudah siap tayang
 
 ## Langkah berikutnya
@@ -34,6 +34,8 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - Kesepakatan: setiap `feat` baru di KatalogWeb ikut diperbarui di entri Project ini.
 - Catatan untuk saat Published: Changelog akan ikut menarik commit `main` KatalogWeb, termasuk 18 commit lama tim magang (author `Intern Team`) dengan pesan seperti "push db" dan "theme".
 - Typecheck, lint, dan tes lolos. Halaman project dicek di `pnpm dev`.
+- Fitur pagination daftar properti KatalogWeb ditambahkan ke daftar Features di `content/projects/katalogweb.mdx`.
+- Experience pertama di `content/experience.ts` (Draft): Web Developer Intern, PT. Duta Idaman Property, Jan–Aug 2024, dari CV Naufal. Tampilan di beranda dicek di `pnpm dev`.
 
 ### 2026-10-28: Tema hitam-biru Arknights
 

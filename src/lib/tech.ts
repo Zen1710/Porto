@@ -12,9 +12,12 @@ import {
   siNodedotjs,
   siPhp,
   siPostgresql,
+  siPython,
   siReact,
   siTailwindcss,
+  siTensorflow,
   siTypescript,
+  siUltralytics,
   siVuedotjs,
   type SimpleIcon,
 } from "simple-icons";
@@ -40,6 +43,9 @@ const registry: Record<string, Tech> = {
   html: { label: "HTML", icon: siHtml5 },
   css: { label: "CSS", icon: siCss },
   docker: { label: "Docker", icon: siDocker },
+  python: { label: "Python", icon: siPython },
+  tensorflowjs: { label: "TensorFlow.js", icon: siTensorflow },
+  ultralytics: { label: "Ultralytics", icon: siUltralytics },
 };
 
 /** Looks up a tech by key (e.g. "nextjs"); unknown names render as plain text chips. */

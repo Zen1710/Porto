@@ -18,6 +18,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - [ ] Akun Resend dan env `RESEND_API_KEY` / `CONTACT_TO_EMAIL` (lihat `.env.example`)
 - [ ] Entri Experience di `content/experience.ts`: magang PT. Duta Idaman Property sudah ditulis Claude dari CV (Draft), tinggal direview. Pengalaman lain di CV (IT Helpdesk PT. Telkom Akses, magang KJA Ahmad Syahfuddin, pendidikan) belum dimasukkan.
 - [ ] Review teks Project Property E-Catalog di `content/projects/katalogweb.mdx` (ditulis Claude dari CV dan isi repo KatalogWeb), lalu hapus `draft: true` kalau sudah siap tayang
+- [ ] Review teks Project Whitefly Detection di `content/projects/whitefly-detection.mdx` (ditulis Claude dari CV dan README repo), lalu hapus `draft: true` kalau sudah siap tayang
 
 ## Langkah berikutnya
 
@@ -26,6 +27,14 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 3. Import repo ke Vercel Hobby, isi env Resend, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
 
 ## Log
+
+### 2026-11-01: Project Whitefly Detection
+
+- Project baru `content/projects/whitefly-detection.mdx` (Draft) untuk https://github.com/Zen1710/YOLOv11_detectionWhiteFlies, tugas akhir Naufal. Isinya diambil dari CV (`~/Developer/task/cv/cv.md`) dan README repo. Tanggal Jul 2025 mengikuti tanggal ekspor model di `metadata.yaml`.
+- Cover `public/projects/whitefly-detection.png` adalah screenshot live demo di GitHub Pages, dengan gambar contoh dari output notebook training (set Train). Live demo berjalan: model termuat dan deteksi jalan.
+- Ikon tech baru di `src/lib/tech.ts`: `python`, `tensorflowjs`, `ultralytics`.
+- Hasil demo di gambar contoh: 96 deteksi, padahal kutu yang terlihat sekitar 15. Ini keterbatasan yang sudah dicatat di README repo (tanpa NMS). Ditulis jujur di teks Project, dan angka mAP tidak dikutip karena log notebook bukan hasil akhir.
+- Typecheck, lint, dan tes lolos. Halaman project dan daftar di beranda dicek di `pnpm dev`.
 
 ### 2026-10-30: Project Property E-Catalog
 

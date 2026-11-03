@@ -3,7 +3,13 @@ import { z } from "zod";
 export const MIN_FILL_MS = 3000;
 
 export const contactSchema = z.object({
-  name: z.string().trim().min(1, "Please enter your name.").max(100, "That name is too long."),
+  name: z
+    .string()
+    .trim()
+    .min(1, "Please enter your name.")
+    .max(100, "That name is too long.")
+    // The name goes into the email subject, where a line break could split the header.
+    .regex(/^[^\r\n]*$/, "Please keep your name on one line."),
   email: z
     .string()
     .trim()

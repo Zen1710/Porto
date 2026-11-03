@@ -32,6 +32,12 @@ describe("screenSubmission", () => {
     expect(result.verdict).toBe("invalid");
   });
 
+  it("rejects a name with a line break, since it goes into the email subject", () => {
+    const result = screenSubmission({ ...valid, name: "Recruiter\r\nBcc: victim@example.com" }, now);
+    if (result.verdict !== "invalid") throw new Error("expected invalid");
+    expect(result.state.fieldErrors?.name).toBe("Please keep your name on one line.");
+  });
+
   it("reports each invalid field and keeps what was typed", () => {
     const result = screenSubmission({ ...valid, name: "", email: "not-an-email", message: "hi" }, now);
     if (result.verdict !== "invalid") throw new Error("expected invalid");

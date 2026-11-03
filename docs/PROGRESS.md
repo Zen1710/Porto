@@ -16,6 +16,7 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - [ ] Review teks About di `content/about.mdx` (ditulis Claude dari fakta yang Naufal berikan)
 - [ ] Lengkapi kalimat placeholder di `content/projects/portfolio-site.mdx` dan `content/build-logs/01-designing-before-coding.mdx`, lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Akun Resend dan env `RESEND_API_KEY` / `CONTACT_TO_EMAIL` (lihat `.env.example`)
+- [ ] Saat deploy: buat rule rate limit di Vercel Firewall (ID `contact-form`, 5 request per 10 menit per IP). Langkahnya ada di README bagian Contact form. Tanpa rule ini, form kontak tidak punya rate limit.
 - [ ] Entri Experience di `content/experience.ts`: magang PT. Duta Idaman Property sudah ditulis Claude dari CV (Draft), tinggal direview. Pengalaman lain di CV (IT Helpdesk PT. Telkom Akses, magang KJA Ahmad Syahfuddin, pendidikan) belum dimasukkan.
 - [ ] Review teks Project Property E-Catalog di `content/projects/katalogweb.mdx` (ditulis Claude dari CV dan isi repo KatalogWeb), lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Review teks Project Whitefly Detection di `content/projects/whitefly-detection.mdx` (ditulis Claude dari CV dan README repo), lalu hapus `draft: true` kalau sudah siap tayang
@@ -24,9 +25,16 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 
 1. Lanjutkan pengembangan lokal sesuai kebutuhan Naufal.
 2. Kerjakan perubahan di `develop`, lalu merge ke `main` kalau sudah siap tayang.
-3. Import repo ke Vercel Hobby, isi env Resend, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
+3. Import repo ke Vercel Hobby, isi env Resend, buat rule rate limit `contact-form`, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
 
 ## Log
+
+### 2026-11-03: Security review dan perbaikan form kontak
+
+- Security review dengan skill `sentry-security-review`. Temuan: form kontak tidak punya rate limit (honeypot dan time trap gampang dilewati), dan nama dengan baris baru bisa masuk ke subject email. Yang aman: XSS, path traversal, SSRF, CSRF, secret di repo, dan dependency produksi.
+- Rate limit per IP lewat Vercel WAF (`@vercel/firewall`, `src/lib/rate-limit.ts`), dipanggil di `sendMessage` sebelum email dikirim. Fail-open dan dilewati di luar Vercel. Alasannya di ADR 0004.
+- Schema `name` menolak `\r` / `\n`. Tes baru di `src/lib/contact.test.ts`.
+- Typecheck, lint, tes (14), dan `pnpm build` lolos. Rate limit belum bisa dites lokal karena hanya jalan di Vercel; cek setelah deploy dengan mengirim lebih dari 5 pesan dalam 10 menit.
 
 ### 2026-11-01: Project Whitefly Detection
 

@@ -2,6 +2,7 @@
 
 import { screenSubmission, type ContactState } from "@/lib/contact";
 import { MailerNotConfiguredError, sendContactEmail } from "@/lib/mailer";
+import { isContactRateLimited } from "@/lib/rate-limit";
 
 export async function sendMessage(_prev: ContactState, formData: FormData): Promise<ContactState> {
   const field = (key: string) => {
@@ -23,6 +24,15 @@ export async function sendMessage(_prev: ContactState, formData: FormData): Prom
   // Bots get the same answer as people so they learn nothing.
   if (screening.verdict === "spam") return { status: "success" };
   if (screening.verdict === "invalid") return screening.state;
+
+  // Only messages that would really be emailed count toward the limit.
+  if (await isContactRateLimited()) {
+    return {
+      status: "error",
+      message: "Too many messages from your network. Please wait a few minutes and try again.",
+      values: screening.data,
+    };
+  }
 
   try {
     await sendContactEmail(screening.data);

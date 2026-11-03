@@ -58,6 +58,8 @@ The form posts to a Server Action (`src/app/actions.ts`). It checks a honeypot f
 
 Add the same variables in Vercel under Project → Settings → Environment Variables.
 
+Before an email goes out, the action asks the Vercel Firewall whether the sender's IP has hit the rate limit (`src/lib/rate-limit.ts`). This only runs on Vercel, and it needs a rule in the dashboard: Firewall → Configure → New Rule, **If** `@vercel/firewall` with Rate limit ID `contact-form`, **Then** Rate Limit, Fixed Window, 10 minutes, 5 requests, keyed by IP. Without the rule, the check lets every message through and logs a warning.
+
 ## Changelog
 
 The Changelog section is built from GitHub commits of this repo (`sourceRepo` in `content/profile.ts`) and of every visible Project that has a `repo`. Merge commits are skipped and only the first line of each message is shown. Production fetches once per build, so the list refreshes on every deploy. Local dev rechecks every minute. Set `GITHUB_TOKEN` to raise GitHub's API rate limit; without it the build still works and simply skips repos it cannot read.

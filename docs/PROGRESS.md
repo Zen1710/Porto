@@ -16,16 +16,29 @@ Log pengembangan situs portfolio. Entri terbaru di atas. Bagian **Status** dan *
 - [ ] Review teks About di `content/about.mdx` (ditulis Claude dari fakta yang Naufal berikan)
 - [ ] Lengkapi kalimat placeholder di `content/projects/portfolio-site.mdx` dan `content/build-logs/01-designing-before-coding.mdx`, lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Akun Resend dan env `RESEND_API_KEY` / `CONTACT_TO_EMAIL` (lihat `.env.example`)
-- [ ] Saat deploy: buat rule rate limit di Vercel Firewall (ID `contact-form`, 5 request per 10 menit per IP). Langkahnya ada di README bagian Contact form. Tanpa rule ini, form kontak tidak punya rate limit.
 - [ ] Entri Experience di `content/experience.ts`: magang PT. Duta Idaman Property sudah ditulis Claude dari CV (Draft), tinggal direview. Pengalaman lain di CV (IT Helpdesk PT. Telkom Akses, magang KJA Ahmad Syahfuddin, pendidikan) belum dimasukkan.
 - [ ] Review teks Project Property E-Catalog di `content/projects/katalogweb.mdx` (ditulis Claude dari CV dan isi repo KatalogWeb), lalu hapus `draft: true` kalau sudah siap tayang
 - [ ] Review teks Project Whitefly Detection di `content/projects/whitefly-detection.mdx` (ditulis Claude dari CV dan README repo), lalu hapus `draft: true` kalau sudah siap tayang
+
+## Checklist sebelum deploy
+
+Tunjukkan daftar ini ke Naufal setiap kali dia mau deploy, lalu centang yang sudah beres.
+
+Sebelum deploy:
+- [ ] **Env Resend di Vercel** (wajib). `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, opsional `CONTACT_FROM_EMAIL`. Tanpa ini form kontak menjawab "isn't connected yet".
+- [ ] **Security headers** (opsional, prioritas rendah). Belum ada CSP, `frame-ancestors`/`X-Frame-Options`, `Referrer-Policy`. Tambah lewat `async headers()` di `next.config.ts`; CSP perlu hash/nonce untuk `themeScript` dan izin script Vercel Analytics.
+- [ ] **`GITHUB_TOKEN`** (opsional). Menaikkan rate limit GitHub API untuk Changelog.
+
+Saat dan setelah deploy:
+- [ ] **Rule Vercel Firewall `contact-form`** (wajib). Firewall → Configure → New Rule: If `@vercel/firewall` ID `contact-form`, Then Rate Limit, Fixed Window 10 menit, 5 request, key IP. Tanpa rule ini rate limit form kontak tidak aktif (lihat ADR 0004 dan README).
+- [ ] **Aktifkan Web Analytics** di project Vercel.
+- [ ] **Tes form kontak di situs live.** Kirim satu pesan uji, lalu kirim lebih dari 5 pesan dalam 10 menit dan pastikan muncul "Too many messages".
 
 ## Langkah berikutnya
 
 1. Lanjutkan pengembangan lokal sesuai kebutuhan Naufal.
 2. Kerjakan perubahan di `develop`, lalu merge ke `main` kalau sudah siap tayang.
-3. Import repo ke Vercel Hobby, isi env Resend, buat rule rate limit `contact-form`, aktifkan Web Analytics. Domain awal: `naufalrizkyananda.vercel.app`.
+3. Import repo ke Vercel Hobby dan ikuti **Checklist sebelum deploy** di atas. Domain awal: `naufalrizkyananda.vercel.app`.
 
 ## Log
 
